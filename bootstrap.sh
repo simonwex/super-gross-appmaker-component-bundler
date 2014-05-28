@@ -1,5 +1,6 @@
 #!/bin/sh
 
+mkdir thumbnails
 
 mkdir component-paypal
 mkdir component-image
