@@ -31,3 +31,6 @@ mkdir component-kickdrum
 mkdir component-sequencer
 mkdir component-cowbell
 mkdir component-snaredrum
+mkdir component-meatspaces-messages
+mkdir component-meatspaces-input
+mkdir component-canvas
