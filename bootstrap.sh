@@ -27,3 +27,7 @@ mkdir component-splitter
 mkdir component-text-input
 mkdir component-textbox
 mkdir component-transformer
+mkdir component-kickdrum
+mkdir component-sequencer
+mkdir component-cowbell
+mkdir component-snaredrum
