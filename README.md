@@ -18,3 +18,6 @@ Be sure to install `vulcanize`, which will concat Polymer elements.
 ```
 npm install -g vulcanize
 ```
+
+## A note about assets
+As gross as this process is, it's also very considerate if you follow some simple rules. If components have assets required to run (images, other js files, etc.), __just make sure they're in a subdirectory inside the component's directory__. The vulcanization process will correct urls used in component.html, and Super Gross Bundler (SGB) will `cp -R` subdirectories so that they're accessible from the bundled html file.
