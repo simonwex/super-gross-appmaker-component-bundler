@@ -9,9 +9,9 @@ for COMPONENT in $(ls -l | egrep '^d' | grep 'component' | sed 's/.*component/co
 do
   echo $COMPONENT
   curl http://mozilla-appmaker.github.io/$COMPONENT/component.html > $COMPONENT/component.html 2> /dev/null
-  curl http://mozilla-appmaker.github.io/$COMPONENT/component.css > $COMPONENT/component.css 2> /dev/null
+  curl -f http://mozilla-appmaker.github.io/$COMPONENT/component.css > $COMPONENT/component.css 2> /dev/null
   mkdir thumbnails/$COMPONENT/
-  curl http://mozilla-appmaker.github.io/$COMPONENT/thumbnail.png > thumbnails/$COMPONENT/thumbnail.png 2> /dev/null
+  curl -f http://mozilla-appmaker.github.io/$COMPONENT/thumbnail.png > thumbnails/$COMPONENT/thumbnail.png 2> /dev/null
   # curl http://mozilla-appmaker.github.io/$COMPONENT/thumbnail.png > thumbnails/$COMPONENT.png 2> /dev/null
   # sed "s/thumbnail\.png/$COMPONENT.png/" $COMPONENT/component.html > ./tmpfile.html
   # mv tmpfile.html $COMPONENT/component.html
