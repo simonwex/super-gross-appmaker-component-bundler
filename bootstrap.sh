@@ -5,7 +5,6 @@ mkdir thumbnails
 mkdir component-addform
 mkdir component-alternating-gate
 mkdir component-audio
-mkdir component-audio-button
 mkdir component-boolean
 mkdir component-button
 mkdir component-button-with-confirmation
