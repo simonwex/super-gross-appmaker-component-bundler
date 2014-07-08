@@ -15,6 +15,7 @@ mkdir component-combiner
 mkdir component-counter
 mkdir component-cowbell
 mkdir component-daily-counter
+mkdir component-dataarray
 mkdir component-dataview
 mkdir component-editform
 mkdir component-fireworks
@@ -25,6 +26,7 @@ mkdir component-jazzhands
 mkdir component-kickdrum
 mkdir component-meatspaces-input
 mkdir component-meatspaces-messages
+mkdir component-media
 mkdir component-metronome
 mkdir component-microphone-button
 mkdir component-paypal
