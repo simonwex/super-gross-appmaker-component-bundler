@@ -35,6 +35,7 @@ mkdir component-spacer
 mkdir component-splitter
 mkdir component-text-input
 mkdir component-textbox
+mkdir component-timer
 mkdir component-transformer
 mkdir component-pad-grid
 mkdir component-notebook
