@@ -41,3 +41,4 @@ mkdir component-notebook
 mkdir component-channel-gate
 mkdir component-double-button
 mkdir component-todo
+mkdir component-game-controller
