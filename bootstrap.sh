@@ -32,6 +32,7 @@ mkdir component-microphone-button
 mkdir component-paypal
 mkdir component-random-number
 mkdir component-sequencer
+mkdir component-sheet
 mkdir component-snaredrum
 mkdir component-spacer
 mkdir component-splitter
