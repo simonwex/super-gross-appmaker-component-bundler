@@ -1,5 +1,10 @@
 #!/bin/sh
 
+APPMAKER_DIR=$1
+if [ -z "$APPMAKER_DIR" ];
+  then APPMAKER_DIR="~/projects/mozilla-appmaker/appmaker";
+fi
+
 rm -rf component-*/*
 
 cp index.html.1 index.html
@@ -24,13 +29,13 @@ do
 
   for ASSET_PATH in `ls -d $COMPONENT/*/`
   do
-    mkdir -p ~/projects/mozilla-appmaker/appmaker/public/bundles/components/$ASSET_PATH
-    cp -R $ASSET_PATH/* ~/projects/mozilla-appmaker/appmaker/public/bundles/components/$ASSET_PATH/
+    mkdir -p $APPMAKER_DIR/public/bundles/components/$ASSET_PATH
+    cp -R $ASSET_PATH/* $APPMAKER_DIR/public/bundles/components/$ASSET_PATH/
   done
 
 
 
-  cp $COMPONENT/thumbnail.png ~/projects/mozilla-appmaker/appmaker/public/bundles/components/$COMPONENT/thumbnail.png
+  cp $COMPONENT/thumbnail.png $APPMAKER_DIR/public/bundles/components/$COMPONENT/thumbnail.png
 done
 
 
@@ -38,14 +43,14 @@ cat index.html.2 >> index.html
 
 vulcanize index.html
 
-mkdir -p ~/projects/mozilla-appmaker/appmaker/public/bundles/components
+mkdir -p $APPMAKER_DIR/public/bundles/components
 
-cp vulcanized.html ~/projects/mozilla-appmaker/appmaker/public/bundles/components/mozilla-appmaker.html
+cp vulcanized.html $APPMAKER_DIR/public/bundles/components/mozilla-appmaker.html
 
 for FILE_PATH in "component-camera-button/images/arrow-up.png" "component-camera-button/images/camera-asleep.png" "component-camera-button/images/folder-photo.png"
 do
   # echo http://mozilla-appmaker.github.io/$FILE_PATH
-  # echo ~/projects/mozilla-appmaker/appmaker/public/bundles/components/$FILE_PATH
-  mkdir -p $(dirname ~/projects/mozilla-appmaker/appmaker/public/bundles/components/${FILE_PATH})
+  # echo $APPMAKER_DIR/public/bundles/components/$FILE_PATH
+  mkdir -p $(dirname $APPMAKER_DIR/public/bundles/components/${FILE_PATH})
   curl http://mozilla-appmaker.github.io/$FILE_PATH > ~/projects/mozilla-appmaker/appmaker/public/bundles/components/$FILE_PATH 2> /dev/null
 done
