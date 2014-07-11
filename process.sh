@@ -2,7 +2,7 @@
 
 APPMAKER_DIR=$1
 if [ -z "$APPMAKER_DIR" ];
-  then APPMAKER_DIR="~/projects/mozilla-appmaker/appmaker";
+  then APPMAKER_DIR="${HOME}/projects/mozilla-appmaker/appmaker";
 fi
 
 rm -rf component-*/*
@@ -47,7 +47,7 @@ mkdir -p $APPMAKER_DIR/public/bundles/components
 
 cp vulcanized.html $APPMAKER_DIR/public/bundles/components/mozilla-appmaker.html
 
-for FILE_PATH in "component-camera-button/images/arrow-up.png" "component-camera-button/images/camera-asleep.png" "component-camera-button/images/folder-photo.png"
+for FILE_PATH in "component-camera-button/images/arrow-up.png" "component-camera-button/images/camera-asleep.png" "component-camera-button/images/folder-photo.png" "component-media/popcorn.js"
 do
   # echo http://mozilla-appmaker.github.io/$FILE_PATH
   # echo $APPMAKER_DIR/public/bundles/components/$FILE_PATH
