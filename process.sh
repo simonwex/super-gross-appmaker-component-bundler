@@ -1,11 +1,10 @@
 #!/bin/sh
 
 rm -rf component-*/*
-rm -rf thumbnails/* 2> /dev/null
 
 cp index.html.1 index.html
 
-for COMPONENT in $(ls -l | egrep '^d' | grep 'component' | sed 's/.*component/component/')
+for COMPONENT in $(ls -l | egrep '^d' | grep 'component-' | sed 's/.*component/component/')
 do
   echo $COMPONENT
   wget -O $COMPONENT.zip https://github.com/mozilla-appmaker/$COMPONENT/archive/gh-pages.zip
