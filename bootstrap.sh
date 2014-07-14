@@ -46,3 +46,4 @@ mkdir component-channel-gate
 mkdir component-double-button
 mkdir component-todo
 mkdir component-game-controller
+mkdir component-popcorn
