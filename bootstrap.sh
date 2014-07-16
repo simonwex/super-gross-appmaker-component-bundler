@@ -1,7 +1,6 @@
 #!/bin/sh
 
 mkdir components
-mkdir component-addform
 mkdir component-alternating-gate
 mkdir component-audio
 mkdir component-boolean
@@ -16,9 +15,6 @@ mkdir component-combiner
 mkdir component-counter
 mkdir component-cowbell
 mkdir component-daily-counter
-mkdir component-dataarray
-mkdir component-dataview
-mkdir component-editform
 mkdir component-fireworks
 mkdir component-header
 mkdir component-hot-potato
